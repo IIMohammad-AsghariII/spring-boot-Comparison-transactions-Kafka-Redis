@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: spring-boot Comparison transactions Kafka Redis
+  main:
+    banner-mode: "off"
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: myGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    topic-result:
+      name: transactions_result
+    topic-receive:
+      name: transactions_receive
+
+server:
+  port:
+    8099
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+  level:
+    root: info
+task:
+  openapi:
+    dev-url: http://localhost:8099
+API:
+  url: url
+
+
+
+
+
+
