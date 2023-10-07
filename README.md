@@ -77,7 +77,7 @@ for send check results via different channels pleae set API Url in application.y
  
  ### Application url
 ```
-	Application Name:   'Spring-boot Comparison transactions Kafka Redis' 
+	Application Name:      'Spring-boot Comparison transactions Kafka Redis' 
 	Application URL: 	http://localhost:8099
 	Swagger UI URL: 	http://localhost:8099/swagger-ui/index.html
 ```
